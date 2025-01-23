@@ -1,0 +1,107 @@
+/* Definindo o estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #228B22; /* Fundo verde */
+}
+
+h1 {
+    color: #FFD700;
+    font-size: 3em;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+    animation: bounce 1s infinite alternate;
+    margin-top: 20px;
+}
+
+/* Animação para o título */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#game-status {
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 2px;
+    margin: 0 auto;
+    width: 420px;
+    height: 420px;
+    border: 2px solid #333;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell.blue {
+    background-color: #1E90FF; /* Tabuleiro azul */
+}
+
+.cell.yellow {
+    background-color: #FFD700; /* Tabuleiro amarelo */
+}
+
+.piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.piece.white-piece {
+    background-color: #FFFFFF; /* Peças brancas */
+}
+
+.piece.black-piece {
+    background-color: #000000; /* Peças pretas */
+}
+
+.selected {
+    border: 2px solid red;
+}
+
+/* Estilos de interação */
+.cell:hover {
+    background-color: #FFD700; /* Realce na célula */
+}
+#sortear-jogador {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#captured-pieces {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.captured-box {
+    border: 2px solid #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
