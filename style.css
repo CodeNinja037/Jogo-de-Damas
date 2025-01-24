@@ -105,3 +105,6 @@ h1 {
     align-items: center;
     background-color: #f0f0f0;
 }
+.queen {
+    border: 2px solid gold; /* Borda dourada para damas */
+}
